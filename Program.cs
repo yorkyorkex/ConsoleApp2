@@ -21,4 +21,7 @@ int sum = numbers.Sum();
 Console.WriteLine($"The sum of the entered numbers is: {sum}");
 
 
+IEnumerable<int> evenNumbers = numbers.Where(n => n % 2 == 0);
+Console.WriteLine("Even numbers entered: " + string.Join(", ", evenNumbers));
+
 Console.ReadKey();
