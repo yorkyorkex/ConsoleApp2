@@ -10,17 +10,17 @@ Console.WriteLine("Hello, World!");
 // Console.WriteLine($"The sum is: {sum}");
 
 
-List<int> numbers = new List<int>();
-for (int i = 0; i < 3; i++)
-{
-    Console.Write($"Enter number {i + 1}: ");
-    int number = int.Parse(Console.ReadLine());
-    numbers.Add(number);
-}
-int sum = numbers.Sum();
-Console.WriteLine($"The sum of the entered numbers is: {sum}");
+// List<int> numbers = new List<int>();
+// for (int i = 0; i < 3; i++)
+// {
+//     Console.Write($"Enter number {i + 1}: ");
+//     int number = int.Parse(Console.ReadLine());
+//     numbers.Add(number);
+// }
+// int sum = numbers.Sum();
+// Console.WriteLine($"The sum of the entered numbers is: {sum}");
 
-
+List<int> numbers = new List<int>( new int[] { 1, 2, 3, 4, 5 });
 IEnumerable<int> evenNumbers = numbers.Where(n => n % 2 == 0);
 Console.WriteLine("Even numbers entered: " + string.Join(", ", evenNumbers));
 
@@ -28,3 +28,9 @@ Console.WriteLine("Even numbers entered: " + string.Join(", ", evenNumbers));
 IEnumerable<int> nums = Enumerable.Range(1, 10);
 IEnumerable<int> squaredNumbers = nums.Select(n => n * n);
 Console.WriteLine("Squared numbers from 1 to 10: " + string.Join(", ", squaredNumbers));
+
+
+string[,] matrix = { { "", "" } };
+matrix[0, 0] = "Hello";
+matrix[0, 1] = "World";
+Console.WriteLine(matrix[0, 0] + " " + matrix[0, 1]);
