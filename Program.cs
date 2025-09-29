@@ -11,7 +11,7 @@ Console.WriteLine("Hello, World!");
 
 
 List<int> numbers = new List<int>();
-for (int i = 0; i < 5; i++)
+for (int i = 0; i < 3; i++)
 {
     Console.Write($"Enter number {i + 1}: ");
     int number = int.Parse(Console.ReadLine());
@@ -24,4 +24,7 @@ Console.WriteLine($"The sum of the entered numbers is: {sum}");
 IEnumerable<int> evenNumbers = numbers.Where(n => n % 2 == 0);
 Console.WriteLine("Even numbers entered: " + string.Join(", ", evenNumbers));
 
-Console.ReadKey();
+
+IEnumerable<int> nums = Enumerable.Range(1, 10);
+IEnumerable<int> squaredNumbers = nums.Select(n => n * n);
+Console.WriteLine("Squared numbers from 1 to 10: " + string.Join(", ", squaredNumbers));
